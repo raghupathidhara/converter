@@ -11,8 +11,12 @@ async function convertCsvToJson() {
     trimHeaderFields: true,
     trimFieldValues : true
   })
-  return json;
+  
+
+  fs.writeFileSync("target.json", JSON.stringify(json));
 }
+
+convertCsvToJson()
 
 
 module.exports= convertCsvToJson;

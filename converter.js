@@ -5,7 +5,7 @@ const fs = require("fs");
 
 async function convertToCsv() {
   
-  let fileData = fs.readFileSync("target.json", "");
+  let fileData = fs.readFileSync("target2.json", "");
   
   fileData = JSON.parse(fileData);
 
