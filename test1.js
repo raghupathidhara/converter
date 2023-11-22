@@ -1,14 +1,5 @@
-const map= new Map();
+const date= new Date(1694864443*1000);
+console.log(Math.round(date.getTime()/1000));
+date.setSeconds(date.getSeconds()+5);
+console.log(Math.round(date.getTime()/1000));
 
-map.set("1|2", "hello");
-map.set("2", "hello");
-map.set("3", "hello");
-
-const keysIterator= map.keys();
-
-let key= keysIterator.next().value;
-while(key){
-    const arr= key.split("|")
-    console.log(arr);
-    key= keysIterator.next().value;
-}
